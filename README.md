@@ -74,6 +74,39 @@ Proyek ini menganalisis **8.402 fasilitas industri** dari data EPA GHGRP tahun 2
 | 🛢️ Petroleum & Gas | 0.84 |
 
 ---
+## ⚙️ Feature Engineering & Algoritma Clustering
+
+### Feature Engineering
+
+Dari data Silver Layer, dilakukan pembuatan fitur tambahan untuk meningkatkan kualitas clustering:
+
+| Fitur | Rumus | Fungsi |
+|-------|-------|--------|
+| `log_emissions` | log(total_emissions + 1) | Mengatasi distribusi data yang skewed (condong ke kanan) |
+| `co2_mean` | Rata-rata CO₂ per fasilitas (2014-2023) | Profil emisi jangka panjang |
+| `ch4_mean` | Rata-rata CH₄ per fasilitas (2014-2023) | Profil emisi jangka panjang |
+| `n2o_mean` | Rata-rata N₂O per fasilitas (2014-2023) | Profil emisi jangka panjang |
+
+> **Fungsi:** Fitur-fitur ini digunakan sebagai input untuk algoritma clustering K-Means dan DBSCAN.
+
+### DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+
+DBSCAN adalah algoritma clustering berbasis kepadatan yang **tidak memerlukan jumlah cluster (k) di awal**.
+
+**Parameter yang digunakan:**
+- `eps` = 0.0659 (dihitung otomatis dari persentil ke-95 jarak 5 tetangga terdekat)
+- `min_samples` = 5
+
+**Kelebihan DBSCAN untuk data emisi:**
+- Mampu mendeteksi **outlier** (fasilitas dengan emisi ekstrem) secara otomatis
+- Tidak perlu menentukan jumlah cluster di awal
+- Cocok untuk data dengan bentuk cluster tidak beraturan
+
+**Hasil DBSCAN:**
+- Jumlah cluster: 13
+- Jumlah noise (outlier): 362 fasilitas (4.3% dari total)
+
+---
 
 ## ⚡ Evaluasi Performa: Pandas vs PySpark
 
