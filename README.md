@@ -45,7 +45,7 @@ Proyek ini menganalisis **8.402 fasilitas industri** dari data EPA GHGRP tahun 2
 ## 🏗️ Arsitektur Pipeline
 
 | Layer | Tools | Aktivitas Utama |
-|-------|-------|-----------------|
+|-----------|-------|-----------------|
 | 🥉 **Bronze** | Pandas | Baca Excel → Ekstrak kolom → Simpan Parquet |
 | 🥈 **Silver** | PySpark | Cleaning → Transformasi → Imputasi → Partition |
 | 🥇 **Gold** | PySpark + Sklearn | Agregasi → K-Means → DBSCAN → Evaluasi |
