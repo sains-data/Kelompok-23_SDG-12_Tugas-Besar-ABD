@@ -79,10 +79,10 @@ Proyek ini menganalisis **8.402 fasilitas industri** dari data EPA GHGRP tahun 2
 
 | Metrik | Pandas (Baseline) | PySpark (Medallion) |
 |--------|-------------------|---------------------|
-| 🚀 Throughput | 17,520 baris/detik | 1,246 baris/detik |
-| ⏱️ Waktu eksekusi | 3.82 detik | 53.42 detik |
-| 📦 Ukuran data | 6.96 MB (CSV) | 2.10 MB (Parquet) |
-| 🗜️ Kompresi | - | **69.9% lebih kecil** |
+| Throughput | 17,520 baris/detik | 1,246 baris/detik |
+| Waktu eksekusi | 3.82 detik | 53.42 detik |
+| Ukuran data | 6.96 MB (CSV) | 2.10 MB (Parquet) |
+| Kompresi | - | **69.9% lebih kecil** |
 
 ### 📊 Perbandingan Arsitektur
 
