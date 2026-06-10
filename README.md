@@ -28,17 +28,17 @@ Proyek ini menganalisis **8.402 fasilitas industri** dari data EPA GHGRP tahun 2
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Tools yang Digunakan
 
 | Teknologi | Fungsi |
 |-----------|--------|
-| 🐍 **Python 3.12** | Bahasa utama |
-| 📊 **Pandas** | Bronze Layer (baca Excel) |
-| ⚡ **PySpark** | Silver & Gold Layer (distributed computing) |
-| 🤖 **Scikit-learn** | Clustering (K-Means, DBSCAN) |
-| 📈 **Matplotlib** | Visualisasi data |
-| ☁️ **Google Colab** | Environment eksekusi |
-| 🐙 **GitHub** | Version control & kolaborasi |
+| **Python 3.12** | Bahasa utama |
+| **Pandas** | Bronze Layer (baca Excel) |
+| **PySpark** | Silver & Gold Layer (distributed computing) |
+| **Scikit-learn** | Clustering (K-Means, DBSCAN) |
+| **Matplotlib** | Visualisasi data |
+| **Google Colab** | Environment eksekusi |
+| **GitHub** | Version control & kolaborasi |
 
 ---
 
@@ -88,11 +88,11 @@ Proyek ini menganalisis **8.402 fasilitas industri** dari data EPA GHGRP tahun 2
 
 | Aspek | Pipeline Satu Lapis | Medallion (Proyek Ini) |
 |-------|---------------------|------------------------|
-| ⏱️ Waktu total | 16.5 detik | ~100 detik |
-| 📈 Silhouette Score | 0.55 | **0.70** |
-| 🔧 Checkpoint | Tidak ada | Ada per layer |
-| 🐛 Debugging | Sulit | Mudah |
-| 👥 Kolaborasi tim | Sulit | Mudah |
+| Waktu total | 16.5 detik | ~100 detik |
+| Silhouette Score | 0.55 | **0.70** |
+| Checkpoint | Tidak ada | Ada per layer |
+| Debugging | Sulit | Mudah |
+| Kolaborasi tim | Sulit | Mudah |
 
 > **💡 Kesimpulan:** Medallion lebih lambat untuk dataset kecil, tapi **unggul dalam maintainability, debugging, dan skalabilitas** untuk data besar (GB/TB).
 
